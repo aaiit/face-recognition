@@ -11,18 +11,19 @@ net = cv2.dnn.readNetFromCaffe(prototxt, model)
 
 def extract(image):
 	# resize it to have a maximum width of 400 pixels
-	image = imutils.resize(image, width=400)
 	(h, w) = image.shape[:2]
+	# image = imutils.resize(image, width=400)
 	# resize it to have a maximum width of 400 pixels
-	image = imutils.resize(image, width=400)
+	# image = imutils.resize(image, width=400)
 	blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 1.0, (300, 300), (104.0, 177.0, 123.0))
 	print("[INFO] computing object detections...")
 	net.setInput(blob)
 	detections = net.forward()
+	images = []
 	for i in range(0, detections.shape[2]):
 		# extract the confidence (i.e., probability) associated with the prediction
 		confidence = detections[0, 0, i, 2]
-		images = []
+		
 		# filter out weak detections by ensuring the `confidence` is
 		# greater than the minimum confidence threshold
 		if confidence > 0.5:
@@ -41,4 +42,4 @@ image_file = 'sample_image.jpg'
 im = cv2.imread(image_file)
 tmp = extract(im)
 print(tmp)
-print(tmp.shape)
+print(len(tmp))
