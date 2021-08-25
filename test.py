@@ -1,5 +1,3 @@
-# https://stackoverflow.com/questions/29104107/upload-image-using-post-form-data-in-python-requests
-#  https://aws.amazon.com/fr/getting-started/hands-on/serve-a-flask-app/
 import base64
 import json
 import requests
@@ -13,15 +11,13 @@ im_b64 = base64.b64encode(im_bytes).decode("utf8")
 
 headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
   
-payload = json.dumps({"image": im_b64, "token": "******","k" = 10})
+payload = json.dumps({"image": im_b64, "token": "******","k" : 10})
 
 print(payload)
-print()
-print()
-print()
+
 response = requests.post(api, data=payload, headers=headers)
 try:
     data = response.json()     
-    print(data)                
+    print(data["user"])       
 except requests.exceptions.RequestException:
     print(response.text)
