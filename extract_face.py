@@ -35,7 +35,8 @@ def extract(image):
 			y = startY - 10 if startY - 10 > 10 else startY + 10
 			# images.append(image[startX:endX,startY:endY])
 			images.append([startX,endX,startY,endY])
-	print("len images :",len(images))
+	print("len faces :",len(images))
+	print(images)
 	return images
 
 image_file = 'sample_image.jpg'

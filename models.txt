@@ -8,3 +8,7 @@ wget -N https://raw.githubusercontent.com/opencv/opencv/master/samples/dnn/face_
 
 
 wget -N https://raw.githubusercontent.com/opencv/opencv_3rdparty/dnn_samples_face_detector_20170830/res10_300x300_ssd_iter_140000.caffemodel
+
+
+
+https://drive.google.com/file/d/100fPG0cIa0GCKdwep8CDQcCv6I0lm1YU/view?usp=sharing
