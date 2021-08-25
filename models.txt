@@ -12,11 +12,22 @@ wget -N https://raw.githubusercontent.com/opencv/opencv/master/samples/dnn/face_
 wget -N https://raw.githubusercontent.com/opencv/opencv_3rdparty/dnn_samples_face_detector_20170830/res10_300x300_ssd_iter_140000.caffemodel
 
 
+Vggg
 
 https://drive.google.com/file/d/100fPG0cIa0GCKdwep8CDQcCv6I0lm1YU/view?usp=sharing
+
+Cooool
+
+https://drive.google.com/file/d/1hHEuC_blwMJBnb8-JakkKY1cgF5-uHKi/view?usp=sharing
 
 import gdown
 
 url = 'https://drive.google.com/uc?id=100fPG0cIa0GCKdwep8CDQcCv6I0lm1YU'
 output = 'vgg_face_weights.h5'
+gdown.download(url, output, quiet=False)
+
+import gdown
+
+url = 'https://drive.google.com/uc?id=1hHEuC_blwMJBnb8-JakkKY1cgF5-uHKi'
+output = 'cool.pickle'
 gdown.download(url, output, quiet=False)

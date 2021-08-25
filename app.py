@@ -49,7 +49,7 @@ def hello_insta():
    d = sorted([ [distance(em,embendings[0]),user] for em,user in zip(b,a)])
 
    # get topk
-   k = 10
+   k = int(request.json["k"])
    topk = d[:k]
    # access other keys of json
    print(request.json['token'])
