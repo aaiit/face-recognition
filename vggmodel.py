@@ -1,6 +1,10 @@
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import ZeroPadding2D, Convolution2D, MaxPooling2D, Dropout, Flatten, Activation
 
+import numpy as np
+import cv2
+
+
 def vgg_face():	
     model = Sequential()
     model.add(ZeroPadding2D((1,1),input_shape=(224,224, 3)))
@@ -52,7 +56,6 @@ model.load_weights('vgg_face_weights.h5')
 
 
 model.summary()
-
 
 def get_embending(img):
     img = (img / 255.).astype(np.float32)

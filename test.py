@@ -4,7 +4,7 @@ import base64
 import json
 import requests
 
-api = 'http://localhost:5000/test'
+api = 'http://52.56.44.23:5000/test'
 image_file = 'sample_image.jpg'
 
 with open(image_file, "rb") as f:
