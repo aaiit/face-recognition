@@ -1,2 +1,5 @@
 flask===1.1.2
 imutils
+numpy
+pillow
+opencv-python
