@@ -32,7 +32,8 @@ def extract(image):
 			# draw the bounding box of the face along with the associated probability
 			text = "{:.2f}%".format(confidence * 100)
 			y = startY - 10 if startY - 10 > 10 else startY + 10
-			images.append([startX:endX,startY:endY])
+			# images.append(image[startX:endX,startY:endY])
+			images.append([startX,endX,startY,endY])
 	print("len images :",len(images))
 	return images
 
