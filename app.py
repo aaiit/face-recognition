@@ -4,7 +4,8 @@ import base64
 import logging       
 import numpy as np
 from PIL import Image
-
+from extract_faces import extract
+from vggmodel import get_embending
 from flask import Flask, request, jsonify, abort
 
 app = Flask(__name__)
@@ -29,6 +30,13 @@ def hello_insta():
    print('img shape', img_arr.shape)
 
    # process your img_arr here  
+   # extract faces
+   faces = extract(img_arr)
+   # Calculate embending
+   embendings = [ get_embending(f) for f in faces]
+   # we take only one face
+   print(embendings[0].shape)
+
    
    # access other keys of json
    print(request.json['token'])

@@ -50,4 +50,12 @@ model = vgg_face()
 model.load_weights('vgg_face_weights.h5')
 
 
+
 model.summary()
+
+
+def get_embending(img):
+    img = (img / 255.).astype(np.float32)
+    img = cv2.resize(img, dsize = (224,224))
+    embedding_vector = model.predict(np.expand_dims(img, axis=0))[0]
+    return embedding_vector
