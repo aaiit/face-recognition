@@ -11,7 +11,7 @@ im_b64 = base64.b64encode(im_bytes).decode("utf8")
 
 headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
   
-payload = json.dumps({"image": im_b64, "token": "******","k" : 1000})
+payload = json.dumps({"image": im_b64, "token": "******","k" : 10})
 
 # print(payload)
 
@@ -22,6 +22,6 @@ try:
     for i in data["results"]:
         print(i[0],i[1])   
         l.append(i[1])
-    print(l.index("zouaine_youssef"))  
+    # print(l.index("zouaine_youssef"))  
 except requests.exceptions.RequestException:
     print(response.text)

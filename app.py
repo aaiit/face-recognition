@@ -36,12 +36,13 @@ def hello_insta():
 
    # PIL image object to numpy array
    img_arr = np.asarray(img)   
-   img_arr = cv2.cvtColor(img_arr, cv2.COLOR_BGR2RGB)
+   
    print('img shape', img_arr.shape)
 
    # process your img_arr here  
    # extract faces
    faces = extract(img_arr)
+   faces = [ cv2.cvtColor(f, cv2.COLOR_BGR2RGB) for f in faces]
    # Calculate embending
    embendings = [ get_embending(f) for f in faces]
    # we take only one face
