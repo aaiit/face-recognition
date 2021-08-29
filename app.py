@@ -12,6 +12,12 @@ app = Flask(__name__)
 
 def distance(emb1, emb2):return np.sum(np.square(emb1 - emb2))
 
+# Read data embending
+import pickle
+
+f= open('cool.pickle', 'rb') 
+a, b = pickle.load(f)
+
 @app.route("/test", methods=['POST'])
 def hello_insta():
    # print(request.json)     
@@ -29,6 +35,7 @@ def hello_insta():
 
    # PIL image object to numpy array
    img_arr = np.asarray(img)   
+   img_arr = cv2.cvtColor(img_arr, cv2.COLOR_BGR2RGB)
    print('img shape', img_arr.shape)
 
    # process your img_arr here  
@@ -39,11 +46,6 @@ def hello_insta():
    # we take only one face
    print(embendings[0].shape)
 
-   # Read data embending
-   import pickle
-
-   f= open('cool.pickle', 'rb') 
-   a, b = pickle.load(f)
 
    # Calculate the distace
    d = sorted([ [distance(em,embendings[0]),user] for em,user in zip(b,a)])

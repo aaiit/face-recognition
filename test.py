@@ -2,8 +2,8 @@ import base64
 import json
 import requests
 
-api = 'http://52.56.44.23:5000/test'
-image_file = 'image2.jpg'
+api = 'http://52.56.183.210:5000/test'
+image_file = 'test.jpg'
 
 with open(image_file, "rb") as f:
     im_bytes = f.read()        
