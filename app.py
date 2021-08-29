@@ -54,9 +54,9 @@ def hello_insta():
    k = int(request.json["k"])
    topk = d[:k]
    # access other keys of json
-   print(request.json['token'])
+   # print(request.json['token'])
 
-   result_dict = {'user': topk}
+   result_dict = {'results': topk,"status":"Done"}
 
 
    return result_dict

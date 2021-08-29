@@ -39,8 +39,8 @@ def extract(image):
 	# print(images)
 	return images
 
-image_file = 'sample_image.jpg'
-im = cv2.imread(image_file)
-tmp = extract(im)
-print(tmp)
-print(len(tmp))
+# image_file = 'sample_image.jpg'
+# im = cv2.imread(image_file)
+# tmp = extract(im)
+# print(tmp)
+# print(len(tmp))
