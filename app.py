@@ -7,6 +7,7 @@ from PIL import Image
 from extract_faces import extract
 from vggmodel import get_embending
 from flask import Flask, request, jsonify, abort
+import cv2
 
 app = Flask(__name__)
 

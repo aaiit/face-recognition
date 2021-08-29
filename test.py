@@ -3,7 +3,7 @@ import json
 import requests
 
 api = 'http://52.56.183.210:5000/test'
-image_file = 'test.jpg'
+image_file = 'test/test.jpg'
 
 with open(image_file, "rb") as f:
     im_bytes = f.read()        
