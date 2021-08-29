@@ -8,13 +8,13 @@ from extract_faces import extract
 from vggmodel import get_embending
 from flask import Flask, request, jsonify, abort
 import cv2
+import pickle
 
 app = Flask(__name__)
 
 def distance(emb1, emb2):return np.sum(np.square(emb1 - emb2))
 
-# Read data embending
-import pickle
+
 
 f= open('cool.pickle', 'rb') 
 a, b = pickle.load(f)
@@ -45,7 +45,7 @@ def hello_insta():
    faces = [ cv2.cvtColor(f, cv2.COLOR_RGB2BGR) for f in faces]
    # Calculate embending
    embendings = [ get_embending(f) for f in faces]
-   # we take only one face
+   print("embendings",len(embendings))
    print(embendings[0].shape)
 
 
