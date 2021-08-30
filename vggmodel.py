@@ -53,12 +53,13 @@ model = vgg_face()
 
 model.load_weights('vgg_face_weights.h5')
 
+from tensorflow.keras.models import Model
+vgg_face_descriptor = Model(inputs=model.layers[0].input, outputs=model.layers[-2].output)
 
-
-model.summary()
+vgg_face_descriptor.summary()
 
 def get_embending(img):
     img = (img / 255.).astype(np.float32)
     img = cv2.resize(img, dsize = (224,224))
-    embedding_vector = model.predict(np.expand_dims(img, axis=0))[0]
+    embedding_vector = vgg_face_descriptor.predict(np.expand_dims(img, axis=0))[0]
     return embedding_vector

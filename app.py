@@ -42,7 +42,7 @@ def hello_insta():
    # process your img_arr here  
    # extract faces
    faces = extract(img_arr)
-   faces = [ cv2.cvtColor(f, cv2.COLOR_RGB2BGR) for f in faces]
+
    # Calculate embending
    embendings = [ get_embending(f) for f in faces]
    print("embendings",len(embendings))

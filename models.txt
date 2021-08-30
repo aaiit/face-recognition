@@ -31,3 +31,13 @@ import gdown
 url = 'https://drive.google.com/uc?id=1hHEuC_blwMJBnb8-JakkKY1cgF5-uHKi'
 output = 'cool.pickle'
 gdown.download(url, output, quiet=False)
+
+T
+notebook 1 : nickiminaj
+notebook 2 : chinadailynews
+notebook 3   : realdonaldtrump
+notebook 4 : saadlamjarred1
+notebook 5 : realmadrid
+cristiano
+
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
