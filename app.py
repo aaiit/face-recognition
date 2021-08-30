@@ -19,6 +19,7 @@ def distance(emb1, emb2):return np.sum(np.square(emb1 - emb2))
 f= open('cool.pickle', 'rb') 
 a, b = pickle.load(f)
 
+prin("The len of faces in the database : ", len(a))
 @app.route("/test", methods=['POST'])
 def hello_insta():
    # print(request.json)     
