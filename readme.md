@@ -1,5 +1,11 @@
 Api integration of Finding the similar faces among our scrapped accounts.
 
+
+Before deploying, a steps should be done:
+- [x] Scrapping users usernames & their media images & detecting and cropping faces and saving them. [kaggle notebook](https://www.kaggle.com/aithammadiabdellatif/instagram-follower-scraper-extract-faces-4)
+- [x] Calculate faces embedding and saving them as pickle file. [kaggle notebook](https://www.kaggle.com/aithammadiabdellatif/27851-embending)
+
+
 The scrapped accounts can be found in this google drive 
 https://drive.google.com/drive/folders/1HJCZuuWvIAPd6uIISs4Q6M4KYRl7UqBO?usp=sharing
 
@@ -32,7 +38,7 @@ The response includes a  scores and usernames of similar faces:
 
 ## Example response output: 
 ```python
-{'user': [[0.024950975782138334, 'kentuckyweapon'], [0.026814208155325495, 'oliver8269'], [0.0324375883373996, 'bantengmerah__'], [0.04298306801568262, 'gany.di'], [0.049299241610240435, 'bantengmerah__'], [0.05290855386010046, 'mp5juiceman'], [0.05889903765995597, 'theyforcedmetheyhardcore'], [0.06250896244452195, 'nazinibba69'], [0.06429998815571769, 'srh_95'], [0.06828424681018239, 'shellabella1213']]}
+{'users': [[0.024950975782138334, 'kentuckyweapon'], [0.026814208155325495, 'oliver8269'], [0.0324375883373996, 'bantengmerah__'], [0.04298306801568262, 'gany.di'], [0.049299241610240435, 'bantengmerah__'], [0.05290855386010046, 'mp5juiceman'], [0.05889903765995597, 'theyforcedmetheyhardcore'], [0.06250896244452195, 'nazinibba69'], [0.06429998815571769, 'srh_95'], [0.06828424681018239, 'shellabella1213']]}
 ```
 
 # Testing from Python 
