@@ -6,8 +6,6 @@ Before deploying, a steps should be done:
 - [x] Calculate faces embedding and saving them as pickle file. [kaggle notebook](https://www.kaggle.com/aithammadiabdellatif/27851-embending)
 
 
-The scrapped accounts can be found in this google drive 
-https://drive.google.com/drive/folders/1HJCZuuWvIAPd6uIISs4Q6M4KYRl7UqBO?usp=sharing
 
 
 # Getting started
