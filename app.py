@@ -9,10 +9,12 @@ from vggmodel import get_embending
 from flask import Flask, request, jsonify, abort
 import cv2
 import pickle
+import scipy.spatial
+
 
 app = Flask(__name__)
 
-def distance(emb1, emb2):return np.sum(np.square(emb1 - emb2))
+def distance(emb1, emb2):return scipy.spatial.distance.cosine(emb1 , emb2)
 
 
 
